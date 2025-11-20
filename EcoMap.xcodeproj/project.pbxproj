@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC08C7A82ECEF82300FA3437 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DC08C7A72ECEF82300FA3437 /* FirebaseAnalytics */; };
+		DC08C7AA2ECEF82300FA3437 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DC08C7A92ECEF82300FA3437 /* FirebaseAuth */; };
+		DC08C7AC2ECEF82300FA3437 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = DC08C7AB2ECEF82300FA3437 /* FirebaseCore */; };
+		DC08C7AE2ECEF82300FA3437 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC08C7AD2ECEF82300FA3437 /* FirebaseFirestore */; };
+		DC08C7B02ECEF82300FA3437 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC08C7AF2ECEF82300FA3437 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC08C7872ECEF62700FA3437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC08C7652ECEF62600FA3437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC08C76C2ECEF62600FA3437;
+			remoteInfo = EcoMap;
+		};
+		DC08C7912ECEF62700FA3437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC08C7652ECEF62600FA3437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC08C76C2ECEF62600FA3437;
+			remoteInfo = EcoMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC08C76D2ECEF62600FA3437 /* EcoMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC08C7862ECEF62700FA3437 /* EcoMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC08C7902ECEF62700FA3437 /* EcoMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcoMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DC08C7982ECEF62700FA3437 /* Exceptions for "EcoMap" folder in "EcoMap" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DC08C76C2ECEF62600FA3437 /* EcoMap */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DC08C76F2ECEF62600FA3437 /* EcoMap */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DC08C7982ECEF62700FA3437 /* Exceptions for "EcoMap" folder in "EcoMap" target */,
+			);
+			path = EcoMap;
+			sourceTree = "<group>";
+		};
+		DC08C7892ECEF62700FA3437 /* EcoMapTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EcoMapTests;
+			sourceTree = "<group>";
+		};
+		DC08C7932ECEF62700FA3437 /* EcoMapUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EcoMapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC08C76A2ECEF62600FA3437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC08C7A82ECEF82300FA3437 /* FirebaseAnalytics in Frameworks */,
+				DC08C7AE2ECEF82300FA3437 /* FirebaseFirestore in Frameworks */,
+				DC08C7AC2ECEF82300FA3437 /* FirebaseCore in Frameworks */,
+				DC08C7B02ECEF82300FA3437 /* FirebaseStorage in Frameworks */,
+				DC08C7AA2ECEF82300FA3437 /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C7832ECEF62700FA3437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C78D2ECEF62700FA3437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC08C7642ECEF62600FA3437 = {
+			isa = PBXGroup;
+			children = (
+				DC08C76F2ECEF62600FA3437 /* EcoMap */,
+				DC08C7892ECEF62700FA3437 /* EcoMapTests */,
+				DC08C7932ECEF62700FA3437 /* EcoMapUITests */,
+				DC08C76E2ECEF62600FA3437 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC08C76E2ECEF62600FA3437 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC08C76D2ECEF62600FA3437 /* EcoMap.app */,
+				DC08C7862ECEF62700FA3437 /* EcoMapTests.xctest */,
+				DC08C7902ECEF62700FA3437 /* EcoMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC08C76C2ECEF62600FA3437 /* EcoMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC08C7992ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMap" */;
+			buildPhases = (
+				DC08C7692ECEF62600FA3437 /* Sources */,
+				DC08C76A2ECEF62600FA3437 /* Frameworks */,
+				DC08C76B2ECEF62600FA3437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DC08C76F2ECEF62600FA3437 /* EcoMap */,
+			);
+			name = EcoMap;
+			packageProductDependencies = (
+				DC08C7A72ECEF82300FA3437 /* FirebaseAnalytics */,
+				DC08C7A92ECEF82300FA3437 /* FirebaseAuth */,
+				DC08C7AB2ECEF82300FA3437 /* FirebaseCore */,
+				DC08C7AD2ECEF82300FA3437 /* FirebaseFirestore */,
+				DC08C7AF2ECEF82300FA3437 /* FirebaseStorage */,
+			);
+			productName = EcoMap;
+			productReference = DC08C76D2ECEF62600FA3437 /* EcoMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC08C7852ECEF62700FA3437 /* EcoMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC08C79E2ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMapTests" */;
+			buildPhases = (
+				DC08C7822ECEF62700FA3437 /* Sources */,
+				DC08C7832ECEF62700FA3437 /* Frameworks */,
+				DC08C7842ECEF62700FA3437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC08C7882ECEF62700FA3437 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC08C7892ECEF62700FA3437 /* EcoMapTests */,
+			);
+			name = EcoMapTests;
+			packageProductDependencies = (
+			);
+			productName = EcoMapTests;
+			productReference = DC08C7862ECEF62700FA3437 /* EcoMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC08C78F2ECEF62700FA3437 /* EcoMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC08C7A12ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMapUITests" */;
+			buildPhases = (
+				DC08C78C2ECEF62700FA3437 /* Sources */,
+				DC08C78D2ECEF62700FA3437 /* Frameworks */,
+				DC08C78E2ECEF62700FA3437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC08C7922ECEF62700FA3437 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC08C7932ECEF62700FA3437 /* EcoMapUITests */,
+			);
+			name = EcoMapUITests;
+			packageProductDependencies = (
+			);
+			productName = EcoMapUITests;
+			productReference = DC08C7902ECEF62700FA3437 /* EcoMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC08C7652ECEF62600FA3437 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					DC08C76C2ECEF62600FA3437 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					DC08C7852ECEF62700FA3437 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = DC08C76C2ECEF62600FA3437;
+					};
+					DC08C78F2ECEF62700FA3437 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = DC08C76C2ECEF62600FA3437;
+					};
+				};
+			};
+			buildConfigurationList = DC08C7682ECEF62600FA3437 /* Build configuration list for PBXProject "EcoMap" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC08C7642ECEF62600FA3437;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DC08C76E2ECEF62600FA3437 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC08C76C2ECEF62600FA3437 /* EcoMap */,
+				DC08C7852ECEF62700FA3437 /* EcoMapTests */,
+				DC08C78F2ECEF62700FA3437 /* EcoMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC08C76B2ECEF62600FA3437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C7842ECEF62700FA3437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C78E2ECEF62700FA3437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC08C7692ECEF62600FA3437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C7822ECEF62700FA3437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC08C78C2ECEF62700FA3437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC08C7882ECEF62700FA3437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC08C76C2ECEF62600FA3437 /* EcoMap */;
+			targetProxy = DC08C7872ECEF62700FA3437 /* PBXContainerItemProxy */;
+		};
+		DC08C7922ECEF62700FA3437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC08C76C2ECEF62600FA3437 /* EcoMap */;
+			targetProxy = DC08C7912ECEF62700FA3437 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DC08C79A2ECEF62700FA3437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcoMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC08C79B2ECEF62700FA3437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcoMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DC08C79C2ECEF62700FA3437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC08C79D2ECEF62700FA3437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC08C79F2ECEF62700FA3437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoMap";
+			};
+			name = Debug;
+		};
+		DC08C7A02ECEF62700FA3437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcoMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EcoMap";
+			};
+			name = Release;
+		};
+		DC08C7A22ECEF62700FA3437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoMap;
+			};
+			name = Debug;
+		};
+		DC08C7A32ECEF62700FA3437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97YS96AX4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pakdiltalha.EcoMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcoMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC08C7682ECEF62600FA3437 /* Build configuration list for PBXProject "EcoMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC08C79C2ECEF62700FA3437 /* Debug */,
+				DC08C79D2ECEF62700FA3437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC08C7992ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC08C79A2ECEF62700FA3437 /* Debug */,
+				DC08C79B2ECEF62700FA3437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC08C79E2ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC08C79F2ECEF62700FA3437 /* Debug */,
+				DC08C7A02ECEF62700FA3437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC08C7A12ECEF62700FA3437 /* Build configuration list for PBXNativeTarget "EcoMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC08C7A22ECEF62700FA3437 /* Debug */,
+				DC08C7A32ECEF62700FA3437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC08C7A72ECEF82300FA3437 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DC08C7A92ECEF82300FA3437 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DC08C7AB2ECEF82300FA3437 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		DC08C7AD2ECEF82300FA3437 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DC08C7AF2ECEF82300FA3437 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC08C7A62ECEF82300FA3437 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DC08C7652ECEF62600FA3437 /* Project object */;
+}

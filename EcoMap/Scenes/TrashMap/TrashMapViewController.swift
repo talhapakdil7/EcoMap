@@ -5,6 +5,7 @@
 
 import UIKit
 import MapKit
+import SDWebImage
 
 final class TrashMapViewController: UIViewController {
     
@@ -50,22 +51,14 @@ final class TrashMapViewController: UIViewController {
     
     // MARK: - Annotation Güncelleme
     private func updateAnnotations(with reports: [Report]) {
-        // Eski pinleri temizle
         mapView.removeAnnotations(mapView.annotations)
         
-        // Yeni pinler
-        let annotations: [MKPointAnnotation] = reports.map { report in
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: report.latitude,
-                                                           longitude: report.longitude)
-            annotation.title = report.username
-            annotation.subtitle = report.description
-            return annotation
+        let annotations: [ReportAnnotation] = reports.map { report in
+            return ReportAnnotation(report: report)
         }
         
         mapView.addAnnotations(annotations)
         
-        // En az bir rapor varsa, haritayı ilk rapora göre ortala
         if let first = annotations.first {
             let region = MKCoordinateRegion(center: first.coordinate,
                                             span: MKCoordinateSpan(latitudeDelta: 0.05,
@@ -78,11 +71,9 @@ final class TrashMapViewController: UIViewController {
 // MARK: - MKMapViewDelegate
 extension TrashMapViewController: MKMapViewDelegate {
     
-    // İstersen pin görünümünü özelleştirebilirsin
     func mapView(_ mapView: MKMapView,
                  viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        // Kullanıcı konumu pinini özelleştirmiyoruz
         if annotation is MKUserLocation {
             return nil
         }
@@ -98,6 +89,21 @@ extension TrashMapViewController: MKMapViewDelegate {
         }
         
         view?.markerTintColor = .systemGreen
+        
+        // Callout'ta fotoğraf göstermek
+        if let reportAnnotation = annotation as? ReportAnnotation {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 6
+            if let url = URL(string: reportAnnotation.imageUrl) {
+                imageView.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"))
+            } else {
+                imageView.image = UIImage(systemName: "photo")
+            }
+            view?.leftCalloutAccessoryView = imageView
+        }
+        
         return view
     }
 }

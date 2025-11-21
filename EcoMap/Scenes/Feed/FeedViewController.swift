@@ -2,14 +2,12 @@
 //  FeedViewController.swift
 //  EcoMap
 //
-//  Created by Talha Pakdil on 20.11.2025.
-//
+
 import UIKit
 
 final class FeedViewController: UIViewController {
     
     private let viewModel = FeedViewModel()
-    
     private let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -25,9 +23,7 @@ final class FeedViewController: UIViewController {
     }
     
     private func setupTableView() {
-        // tableView'ı view'e ekle
         view.addSubview(tableView)
-        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -40,8 +36,9 @@ final class FeedViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Basit bir standart hücre kullanalım
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "FeedCell")
+        tableView.register(FeedCell.self, forCellReuseIdentifier: FeedCell.reuseId)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     private func setupBindings() {
@@ -53,7 +50,6 @@ final class FeedViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource & Delegate
 extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,14 +59,13 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.reuseId, for: indexPath) as? FeedCell else {
+            return UITableViewCell()
+        }
         
         let report = viewModel.report(at: indexPath.row)
-        
-        // Şimdilik sadece username + description gösterelim
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = "\(report.username): \(report.description)"
-        
+        cell.configure(with: report)
         return cell
     }
 }
+

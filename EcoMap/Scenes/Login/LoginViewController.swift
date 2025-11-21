@@ -1,19 +1,10 @@
-//
-//  ViewController.swift
-//  EcoMap
-//
-//  Created by Talha Pakdil on 20.11.2025.
-//
 import UIKit
 
 final class LoginViewController: UIViewController {
     
     private let viewModel = LoginViewModel()
     
-   
     @IBOutlet weak var emailTextField: UITextField!
-    
-  
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -23,17 +14,24 @@ final class LoginViewController: UIViewController {
         setupBindings()
     }
     
+    // Uygulama açıldığında, kullanıcı zaten giriş yaptıysa
+    // login ekranını atlayıp direkt TabBar'a geçiyoruz
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if FirebaseAuthService.shared.isLoggedIn() {
+            navigateToMainTabBar()
+        }
+    }
+    
     private func setupBindings() {
         
         viewModel.onLoginSuccess = { [weak self] in
             DispatchQueue.main.async {
-                let tabBar = MainTabBarController()
-                tabBar.modalPresentationStyle = .fullScreen
-                self?.present(tabBar, animated: true)
+                self?.navigateToMainTabBar()
             }
         }
 
-        
         // Hata durumu
         viewModel.onLoginError = { [weak self] message in
             self?.showAlert(title: "Hata", message: message)
@@ -45,15 +43,26 @@ final class LoginViewController: UIViewController {
         }
     }
     
+    // Ortak: TabBar'a geç
+    private func navigateToMainTabBar() {
+        let tabBar = MainTabBarController()
+        tabBar.modalPresentationStyle = .fullScreen
+        present(tabBar, animated: true)
+    }
     
     
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        let signUpVC = SignUpViewController()
+                signUpVC.modalPresentationStyle = .fullScreen
+                present(signUpVC, animated: true)
+    }
     
-    // Login butonuna basıldığında çağrılacak (Storyboard'da IBAction bağlayacağız)
+    
+    // Login butonuna basılınca
     @IBAction func loginButtonTapped(_ sender: Any) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         
-        // basit validation
         if email.isEmpty || password.isEmpty {
             showAlert(title: "Uyarı", message: "Email ve şifre boş olamaz.")
             return
@@ -62,10 +71,7 @@ final class LoginViewController: UIViewController {
         viewModel.signIn(email: email, password: password)
     }
     
-    
-    
-    
-    // Basit alert fonksiyonu
+    // Basit alert
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title,
                                       message: message,
@@ -74,5 +80,4 @@ final class LoginViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-
 

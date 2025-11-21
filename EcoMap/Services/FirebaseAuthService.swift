@@ -22,6 +22,11 @@ final class FirebaseAuthService {
             completion(error)
         }
     }
+    // Kullanıcı oturumu var mı?
+    func isLoggedIn() -> Bool {
+        return auth.currentUser != nil
+    }
+
     
     // Current user id
     func currentUserId() -> String? {
@@ -49,5 +54,46 @@ final class FirebaseAuthService {
             }
         }
     }
+    // Şu anki kullanıcının email'i
+    func currentUserEmail() -> String? {
+        return auth.currentUser?.email
+    }
+    
+    // Çıkış yapma
+    func signOut() throws {
+        try auth.signOut()
+    }
+    // Yeni kullanıcı oluşturma (Sign Up)
+    func createUser(email: String,
+                    password: String,
+                    username: String,
+                    completion: @escaping (Error?) -> Void) {
+        
+        auth.createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            guard let uid = result?.user.uid else {
+                completion(NSError(domain: "uid_error", code: -1))
+                return
+            }
+            
+            // Firestore'da users/{uid} dokümanı açıyoruz
+            let userData: [String: Any] = [
+                "username": username,
+                "email": email
+            ]
+            
+            self.db.collection("users").document(uid).setData(userData) { error in
+                completion(error)
+            }
+        }
+    }
+
+
 
 }

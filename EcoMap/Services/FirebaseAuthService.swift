@@ -30,15 +30,24 @@ final class FirebaseAuthService {
     
     // Firestore'dan username çekme
     func fetchUsername(completion: @escaping (String?) -> Void) {
-        guard let uid = auth.currentUser?.uid else {
+        guard let user = auth.currentUser else {
             completion(nil)
             return
         }
         
-               db.collection("users").document(uid).getDocument { snapshot, _ in
-                   let username = snapshot?.get("username") as? String
-                   completion(username)
-               }
+        let uid = user.uid
+        let email = user.email
         
+        db.collection("users").document(uid).getDocument { snapshot, _ in
+            if let username = snapshot?.get("username") as? String {
+                // Firestore'da username alanı varsa onu kullan
+                completion(username)
+            } else {
+                // Firestore'da doküman yoksa ya da username alanı yoksa,
+                // fallback: email'i username gibi kullan
+                completion(email)
+            }
+        }
     }
+
 }

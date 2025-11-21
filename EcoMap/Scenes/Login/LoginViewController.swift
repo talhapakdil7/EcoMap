@@ -25,12 +25,14 @@ final class LoginViewController: UIViewController {
     
     private func setupBindings() {
         
-        // Başarılı giriş
         viewModel.onLoginSuccess = { [weak self] in
-            // TabBar'a geçiş burada olacak (şimdilik sadece print)
-            print("Login başarılı, tab bar'a geçilecek")
-            // Bunu sonraki adımda MainTabBarController ile dolduracağız
+            DispatchQueue.main.async {
+                let tabBar = MainTabBarController()
+                tabBar.modalPresentationStyle = .fullScreen
+                self?.present(tabBar, animated: true)
+            }
         }
+
         
         // Hata durumu
         viewModel.onLoginError = { [weak self] message in

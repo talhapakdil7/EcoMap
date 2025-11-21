@@ -2,6 +2,8 @@ import Foundation
 import FirebaseFirestore
 
 final class FirestoreService {
+    
+    
     static let shared = FirestoreService()
     private init() {}
 

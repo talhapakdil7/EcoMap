@@ -6,11 +6,15 @@
 import UIKit
 import MapKit
 import SDWebImage
+import CoreLocation
 
 final class TrashMapViewController: UIViewController {
     
     private let viewModel = TrashMapViewModel()
     private let mapView = MKMapView()
+    
+    private let locationManager = CLLocationManager()
+    private var didCenterOnUser = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,7 @@ final class TrashMapViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         setupMapView()
+        setupLocation()
         setupBindings()
         
         viewModel.startListeningReports()
@@ -40,6 +45,17 @@ final class TrashMapViewController: UIViewController {
         mapView.showsUserLocation = true
     }
     
+    // MARK: - Location Setup
+    private func setupLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Kullanıcıdan izin iste
+        locationManager.requestWhenInUseAuthorization()
+        
+        // Kullanıcı izni verirse locationManagerDelegate içinde yakalıyoruz
+    }
+    
     // MARK: - ViewModel Binding
     private func setupBindings() {
         viewModel.onReportsChanged = { [weak self] reports in
@@ -58,13 +74,6 @@ final class TrashMapViewController: UIViewController {
         }
         
         mapView.addAnnotations(annotations)
-        
-        if let first = annotations.first {
-            let region = MKCoordinateRegion(center: first.coordinate,
-                                            span: MKCoordinateSpan(latitudeDelta: 0.05,
-                                                                   longitudeDelta: 0.05))
-            mapView.setRegion(region, animated: true)
-        }
     }
 }
 
@@ -105,6 +114,35 @@ extension TrashMapViewController: MKMapViewDelegate {
         }
         
         return view
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension TrashMapViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard let location = locations.last else { return }
+        
+        // Sadece ilk açılışta kullanıcı konumuna git
+        if !didCenterOnUser {
+            didCenterOnUser = true
+            
+            let region = MKCoordinateRegion(
+                center: location.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.04,
+                                       longitudeDelta: 0.04)
+            )
+            
+            mapView.setRegion(region, animated: true)
+        }
     }
 }
 

@@ -14,14 +14,20 @@ Bu proje; MVVM mimarisi, Firebase Auth + Firestore + Storage, CoreLocation ve Ma
 ### Main Screens
 
 <p align="center">
+  <img src="EcoMap/Screenshots/acc.png" width="260" style="border-radius:12px;" />
   <img src="EcoMap/Screenshots/feed.png" width="260" style="border-radius:12px; margin-right:10px;" />
+  
   <img src="EcoMap/Screenshots/upload.png" width="260" style="border-radius:12px; margin-right:10px;" />
-  <img src="EcoMap/Screenshots/user.png" width="260" style="border-radius:12px; margin-right:10px;" />
+  
 </p>
 
 <p align="center">
-  <img src="EcoMap/Screenshots/acc.png" width="260" style="border-radius:12px;" />
-    <img src="EcoMap/Screenshots/map.png" width="260" style="border-radius:12px;" />
+ <img src="EcoMap/Screenshots/map.png" width="260" style="border-radius:12px;" />
+      
+  
+  <img src="EcoMap/Screenshots/user.png" width="260" style="border-radius:12px; margin-right:10px;" />
+   
+   
 </p>
 
 
